@@ -1,0 +1,34 @@
+
+import turtle as trtl
+
+my_turtles = []
+
+turtle_shapes = ["arrow", "turtle", "circle", "square", "triangle", "classic"]
+turtle_colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+
+for s in turtle_shapes:
+  trtl_shape = trtl.Turtle(shape=s)
+  trtl_shape.penup()
+  color = turtle_colors.pop()
+  trtl_shape.color(color)
+  my_turtles.append(t)
+
+
+startx = 0
+starty = 0
+dir = -45
+
+
+for trtl_shape in my_turtles:
+  trtl_shape.goto(startx, starty)
+  trtl_shape.pendown()
+  trtl_shape.right(dir)     
+  trtl_shape.forward(50)
+
+
+  startx = trtl_shape.xcor()
+  starty = trtl_shape.ycor()
+  dir += 45
+
+
+trtl.Screen().mainloop()
